@@ -4,8 +4,8 @@ import {ExternalLink} from "lucide-react";
 
 const ProjectCard = ({project, idx, setSelectedProject}: {project: Project, idx: number, setSelectedProject: (id: string) => void}) => {
     return (
-        <motion.div key={project.id} initial={{opacity: 0, y: 30}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{delay: idx * 0.1}} whileHover={{y: -10}} onClick={() => setSelectedProject(project.id)} className="cursor-pointer group">
-            <div className="rounded-3xl shadow-[12px_12px_24px_#bebebe,-12px_-12px_24px_#ffffff] overflow-hidden transition-shadow hover:shadow-[16px_16px_32px_#bebebe,-16px_-16px_32px_#ffffff]">
+        <motion.div key={project.id} initial={{opacity: 0, y: 30}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{delay: idx * 0.1}} whileHover={{y: -10}} onClick={() => setSelectedProject(project.id)} className="cursor-pointer group h-full">
+            <div className="rounded-3xl shadow-[12px_12px_24px_#bebebe,-12px_-12px_24px_#ffffff] overflow-hidden transition-shadow hover:shadow-[16px_16px_32px_#bebebe,-16px_-16px_32px_#ffffff] h-full">
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

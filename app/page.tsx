@@ -9,6 +9,7 @@ import SmallProjectCard from "@/components/SmallProjectCard";
 import AnimatedButton from "@/animations/AnimatedButton";
 import AnimatedDiv from "@/animations/AnimatedDiv";
 import {PROJECTS, SMALLPROJECTS, SOCIALBUTTONS, TECHSTACK} from "@/api";
+import Link from "next/link";
 
 // @component: DeveloperPortfolio
 const Page = () => {
@@ -91,8 +92,10 @@ const Page = () => {
             {/* Social Links */}
             <div className="flex gap-4 mt-8">
               {SOCIALBUTTONS.map((social, idx) =>
-                  <motion.a key={idx} href={social.link} whileHover={{scale: 1.1, y: -2}} whileTap={{scale: 0.9}} className="p-3 rounded-xl neomorphism-shadow transition-all">
-                    <social.icon size={24} className="" />
+                  <motion.a key={idx} whileHover={{scale: 1.1, y: -2}} whileTap={{scale: 0.9}} className="p-3 rounded-xl neomorphism-shadow transition-all">
+                    <Link href={social.link} target={"_blank"}>
+                      <social.icon size={24} className="" />
+                    </Link>
                   </motion.a>)}
             </div>
           </motion.div>
@@ -122,7 +125,7 @@ const Page = () => {
           </p>
         </AnimatedDiv>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {PROJECTS.map((project, idx) => <ProjectCard project={project} idx={idx} key={idx} setSelectedProject={setSelectedProject}/>)}
         </div>
 
@@ -149,7 +152,7 @@ const Page = () => {
           </p>
         </AnimatedDiv>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 items-stretch">
           {SMALLPROJECTS.map((project, idx) => <SmallProjectCard project={project} idx={idx} key={idx} setSelectedProject={setSelectedProject}/>)}
         </div>
       </div>

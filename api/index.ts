@@ -29,7 +29,6 @@ export const SMALLPROJECTS: SmallProject[] = [{
     id: '1',
     title: 'Weather Widget',
     description: 'Real-time weather display with animations',
-    embedUrl: 'https://example.com/weather',
     link: '#',
     icon: '🌤️'
 }, {
@@ -53,4 +52,4 @@ export const SMALLPROJECTS: SmallProject[] = [{
 }];
 
 export const TECHSTACK = ['React', 'TypeScript', 'Next.js', 'Node.js', 'TailwindCSS', 'Three.js', 'PostgreSQL', 'MongoDB', 'Python', 'Docker', 'AWS', 'Figma'];
-export const SOCIALBUTTONS = [{icon: Github, link: '#'}, {icon: Linkedin, link: '#'}, {icon: Mail, link: '#'}]
+export const SOCIALBUTTONS = [{icon: Github, link: 'https://github.com/ColomboRiccardo'}, {icon: Linkedin, link: 'https://www.linkedin.com/in/riccardo-colombo-534460174/'}, {icon: Mail, link: 'riccardocolombopro@gmail.com'}]
