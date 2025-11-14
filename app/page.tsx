@@ -47,7 +47,7 @@ const Page = () => {
             <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
             <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
             <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
-            <button className="px-6 py-2 rounded-xl shadow-[4px_4px_8px_#bebebe,-4px_-4px_8px_#ffffff] text-left primary-button-bg">
+            <button className="px-6 py-2 rounded-xl shadow-[4px_4px_8px_#bebebe,-4px_-4px_8px_#ffffff] text-left primary-button-bg flex items-center gap-2">
               <Download size={20} /> Resume
             </button>
           </motion.div>)}
