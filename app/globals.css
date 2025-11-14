@@ -1,8 +1,9 @@
 @import "tailwindcss";
-
 :root {
-  --background: #ffffff;
+  --background: #e8e8e8;
   --foreground: #171717;
+  --font-geist-sans: "Inter", sans-serif;
+  --font-geist-mono: "Inter", monospace;
 }
 
 @theme inline {
@@ -10,17 +11,36 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --text-color: oklch(37.3% 0.034 259.733)
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #0a0a0a;*/
+/*    --foreground: #ededed;*/
+/*  }*/
+/*}*/
+
+@layer base {
+  body {
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .primary-button-bg {
+   @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white
+  }
+  .neomorphism-shadow {
+    @apply shadow-[4px_4px_8px_#bebebe,-4px_-4px_8px_#ffffff] hover:shadow-[inset_4px_4px_8px_#bebebe,inset_-4px_-4px_8px_#ffffff]
+  }
+  section, footer {
+    @apply py-20 px-6
+  }
+  .profile-pic{
+    -webkit-filter: drop-shadow(4px 4px 5px #bebebe);
+    filter: drop-shadow(4px 4px 5px #bebebe);
+  }
 }
